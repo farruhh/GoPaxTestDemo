@@ -1,0 +1,12 @@
+${PODS_ROOT}/Target Support Files/Pods-GoPaxTest/Pods-GoPaxTest-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework
+${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework
+${BUILT_PRODUCTS_DIR}/JSONDecoder-Keypath/JSONDecoder_Keypath.framework
+${BUILT_PRODUCTS_DIR}/KWDrawerController/KWDrawerController.framework
+${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework
+${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
+${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework
