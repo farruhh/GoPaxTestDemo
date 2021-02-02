@@ -4,7 +4,7 @@
 //
 //  Created by frank on 2020/10/14.
 //
-
+/*
 import Foundation
 import UIKit
 
@@ -25,3 +25,4 @@ extension StoryBoarded where Self: UIViewController {
         return instantiate()
     }
 }
+*/

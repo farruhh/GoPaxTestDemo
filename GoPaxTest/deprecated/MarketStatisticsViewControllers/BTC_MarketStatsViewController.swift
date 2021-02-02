@@ -4,18 +4,18 @@
 //
 //  Created by frank on 2020/10/14.
 //
-
+/*
 import UIKit
 import CocoaLumberjack
-/// `Market Price Statistics VC (KRW)`
-class KRW_MarketStatsViewController: UIViewController {
+
+/// `Market Price Statistics VC (BTC)`
+class BTC_MarketStatsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    var contents: [Entity]?
-    var keyPathParam: String?
-    var filteredTableData: [String] = []
+    var contents: [Entity] = []
+    var filteredTableData = [String]()
     var resultSearchController = UISearchController()
-    var mockData: [MockData] = [MockData(name: "Ethereum", price: 234234.43464, volume: 6543.564345)]
-    //MARK:- viewDidLoad()
+    var keyPathParam: String?
+    //MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
         APIcall()
@@ -29,32 +29,25 @@ class KRW_MarketStatsViewController: UIViewController {
             return controller
         })()
     }
-    //MARK: - refresh
-    /// `Refresh Tableview`
+    //MARK: - refreshData
+    /// `Refresh TableView`
     /// - Parameter data: Entity
-    func refresh(data: [Entity]) {
-        self.contents = data
+    func refresh(data: Entity) {
+        self.contents.append(data)
         self.tableView.reloadData()
     }
-    //
-    //    func ascendingSortByPrice() {
-    //        self.contents.sorted(by: { $0.price > $1.price })
-    //    }
-    //
-    //    func descendingSortByPrice(){
-    //        self.contents.sorted(by: { $0.price < $1.price })
-    //    }
     //MARK: - APIcall
     func APIcall() {
         ServerCommunicator.getPairs().done{ response in
-            //self.contents.removeAll()
+            // self.contents.removeAll()
             let group = DispatchGroup()
             for keyPathParam in response {
                 group.enter()
                 let pairName = keyPathParam.name
                 ServerCommunicator.getTicker(with: pairName).done{ ticker in
-                    let entity = Entity(name: nil, baseAsset: keyPathParam.baseAsset, quoteAsset: keyPathParam.quoteAsset, price: ticker.price, volume: ticker.volume)
-                    self.refresh(data: [entity])
+                    let entity = Entity(name: nil, baseAsset: keyPathParam.baseAsset, quoteAsset: keyPathParam.baseAsset, price: ticker.price, volume: ticker.volume)
+                    self.refresh(data: entity)
+                    group.leave()
                 }.catch{(err) in
                     print(err)
                     group.leave()
@@ -63,61 +56,39 @@ class KRW_MarketStatsViewController: UIViewController {
             group.notify(queue: .main) {
                 self.tableView.reloadData()
             }
-        }.catch{(err) in
-            print(err)
-        }
-    }
-    func getAssets() {
-        ServerCommunicator.getAssets().done{ response in
-            for assets in response {
-                print(assets)
-            }
-            print(response)
-        }.catch{(err) in
-            print(err)
+        }.catch{(error) in
+            print(error)
         }
     }
 }
 //MARK: - UITableViewDataSource
-extension KRW_MarketStatsViewController: UITableViewDataSource {
+extension BTC_MarketStatsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let data = self.contents else {
-            DDLogError("data is nil")
-            return 0
-        }
-        if data.count == 0 {
-            return self.mockData.count
+        if resultSearchController.isActive {
+            return self.filteredTableData.count
         } else {
-            return data.count
+            return self.contents.count
         }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCell(withIdentifier: "KRW_MarketStatsCell") as! KRW_MarketStatsCell
-        guard let data = self.contents else {
-            DDLogError("data is nil")
-            return cell
-        }
-        if data.count == 0 {
-            let mockData = self.mockData[indexPath.row]
-            cell.configure(mockData: mockData)
-        } else {
-            let entity = data[indexPath.row]
-            cell.configure(data: entity)
-        }
+        let cell =  tableView.dequeueReusableCell(withIdentifier: "BTC_MarketStatsCell") as! BTC_MarketStatsCell
+        let entity = self.contents[indexPath.row]
+        cell.configure(data: entity)
+        
         return cell
     }
 }
 //MARK: - UITableViewDelegate
-extension KRW_MarketStatsViewController: UITableViewDelegate {
+extension BTC_MarketStatsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
 }
 //MARK: - UISearchResultsUpdating
-extension KRW_MarketStatsViewController : UISearchResultsUpdating {
+extension BTC_MarketStatsViewController : UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         filteredTableData.removeAll(keepingCapacity: false)
         let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
@@ -128,3 +99,4 @@ extension KRW_MarketStatsViewController : UISearchResultsUpdating {
         }
     }
 }
+*/

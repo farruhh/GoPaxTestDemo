@@ -21,8 +21,10 @@ extension UIStoryboard {
     class func splashViewController() -> SplashViewController {
         return mainStoryBoard().instantiateViewController(identifier: "SplashViewController") as! SplashViewController
     }
+    /*
     class func tradingPairsVC() -> MainViewController {
         return mainStoryBoard().instantiateViewController(identifier: "TradingPairsViewController") as! MainViewController
     }
+ */
 }
 

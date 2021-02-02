@@ -4,11 +4,12 @@
 //
 //  Created by frank on 2020/10/19.
 //
-
+/*
 import UIKit
 
 /// `Market Price Statistics Cell (KRW)`
 class KRW_MarketStatsCell: UITableViewCell {
+    static let identifier = "KRW_MarketStatsCell"
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var volume: UILabel!
@@ -36,3 +37,4 @@ class KRW_MarketStatsCell: UITableViewCell {
         self.volume.text = String(describing: mockData.volume)
     }
 }
+ */

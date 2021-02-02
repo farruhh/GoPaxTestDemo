@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="75b-nZ-FE5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="75b-nZ-FE5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,18 +27,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1597" y="80"/>
+            <point key="canvasLocation" x="-1478" y="80"/>
         </scene>
         <!--Market Stats View Controller-->
         <scene sceneID="4zI-OA-uQg">
             <objects>
                 <viewController storyboardIdentifier="BTCViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aF4-iE-6TX" customClass="BTC_MarketStatsViewController" customModule="GoPaxTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cqR-u3-ZZm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="674"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="718"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m4n-S0-Mzx">
-                                <rect key="frame" x="0.0" y="44" width="414" height="630"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="674"/>
                                 <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <color key="sectionIndexTrackingBackgroundColor" systemColor="systemOrangeColor"/>
                                 <prototypes>
@@ -109,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYI-ac-2IE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="961" y="887"/>
+            <point key="canvasLocation" x="8626" y="887"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aLk-x5-kGc">
@@ -121,7 +121,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="AQj-GD-1RV" kind="relationship" relationship="rootViewController" id="WkR-47-EnL"/>
+                        <segue destination="eK6-06-tWC" kind="relationship" relationship="rootViewController" id="G4P-NC-q7z"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBs-0f-VOP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -137,7 +137,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TcN-q9-aiw">
-                                <rect key="frame" x="0.0" y="88" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="100"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bGl-ls-ouq">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -207,16 +207,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KIE-Nb-8RA">
-                                <rect key="frame" x="0.0" y="188" width="414" height="674"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Dz-4G-Cpp">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="674"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="718"/>
                                         <connections>
                                             <segue destination="aF4-iE-6TX" kind="embed" id="Wih-Za-6tq"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBd-cb-7WO">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="674"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="718"/>
                                         <connections>
                                             <segue destination="InP-Ab-xHU" kind="embed" id="ijB-rJ-t6x"/>
                                         </connections>
@@ -260,18 +260,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQy-OH-93R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="323" y="80"/>
+            <point key="canvasLocation" x="7987" y="80"/>
         </scene>
         <!--Market Stats View Controller-->
         <scene sceneID="zh7-Uu-3wG">
             <objects>
                 <viewController storyboardIdentifier="KRWViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="InP-Ab-xHU" customClass="KRW_MarketStatsViewController" customModule="GoPaxTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4PL-wk-qGP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="674"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="718"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fHu-Yt-pRG">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="674"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="718"/>
                                 <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <color key="sectionIndexTrackingBackgroundColor" systemColor="systemOrangeColor"/>
                                 <prototypes>
@@ -342,7 +342,73 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6F-wu-IqK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-388" y="887"/>
+            <point key="canvasLocation" x="7277" y="887"/>
+        </scene>
+        <!--Asset Statistics View Controller-->
+        <scene sceneID="UVC-9k-6OU">
+            <objects>
+                <tableViewController storyboardIdentifier="AssetStatisticsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eK6-06-tWC" customClass="AssetStatisticsViewController" customModule="GoPaxTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OFm-pB-iZP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AssetsStatisticsCell" rowHeight="50" id="S8a-Yd-r1K" customClass="AssetsStatisticsCell" customModule="GoPaxTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S8a-Yd-r1K" id="Kjh-kz-6nI">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="LMk-Jv-dW6">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="50"/>
+                                            <subviews>
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOLUME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bw5-Tu-EbT" userLabel="Name">
+                                                    <rect key="frame" x="0.0" y="0.0" width="104.5" height="50"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="14"/>
+                                                    <color key="textColor" systemColor="systemGreenColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRICE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDk-7g-WVr">
+                                                    <rect key="frame" x="134.5" y="0.0" width="105" height="50"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="14"/>
+                                                    <color key="textColor" systemColor="systemGreenColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOLUME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Deo-xR-5Ge">
+                                                    <rect key="frame" x="269.5" y="0.0" width="104.5" height="50"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="14"/>
+                                                    <color key="textColor" systemColor="systemGreenColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="LMk-Jv-dW6" firstAttribute="top" secondItem="Kjh-kz-6nI" secondAttribute="top" id="Gk5-RB-LT3"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="LMk-Jv-dW6" secondAttribute="trailing" id="Spp-Ac-j3f"/>
+                                        <constraint firstAttribute="bottom" secondItem="LMk-Jv-dW6" secondAttribute="bottom" id="dXW-DR-Tgc"/>
+                                        <constraint firstItem="LMk-Jv-dW6" firstAttribute="leading" secondItem="Kjh-kz-6nI" secondAttribute="leadingMargin" id="ecL-8h-Ykn"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="Bw5-Tu-EbT" id="Goq-k9-iHq"/>
+                                    <outlet property="priceLabel" destination="vDk-7g-WVr" id="bwE-Sc-aQK"/>
+                                    <outlet property="volumeLabel" destination="Deo-xR-5Ge" id="zQd-UT-rzc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eK6-06-tWC" id="GEu-tu-3kx"/>
+                            <outlet property="delegate" destination="eK6-06-tWC" id="ue7-ar-v1f"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="mmd-ZA-JVb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OnR-MS-Zfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="80"/>
         </scene>
     </scenes>
     <resources>

@@ -4,7 +4,7 @@
 //
 //  Created by frank on 2020/10/19.
 //
-
+/*
 import UIKit
 ///`Market Price Statistics Cell (BTC)`
 class BTC_MarketStatsCell: UITableViewCell {
@@ -35,3 +35,4 @@ class BTC_MarketStatsCell: UITableViewCell {
         self.volume.text = String(describing: mockData.volume)
     }
 }
+*/

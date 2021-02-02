@@ -4,10 +4,10 @@
 //
 //  Created by frank on 2020/10/14.
 //
-
+/*
 import Foundation
 import UIKit
-/// `Coordinator Pattern: UINavigationCon Flow manager(Alternative). Efficient when the < prepare for segue> method becomes invonvenient  `
+///`Coordinator Pattern: UINavigationCon Flow manager(Alternative). Efficient when the < prepare for segue> method becomes invonvenient`
 class MainCoordinator: SubCoordinator {
     var subCoordinators = [SubCoordinator]()
     var navigationController: UINavigationController
@@ -22,7 +22,12 @@ class MainCoordinator: SubCoordinator {
         vc.coordinator = self
         self.navigationController.pushViewController(vc, animated: true)
     }
+    func gotoNext() {
+        let vc = SplashViewController.instantiate()
+        vc.coordinator = self
+        self.navigationController.pushViewController(vc, animated: true)
+    }
 }
-
+*/
 
 

@@ -9,10 +9,10 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    var coordinator: MainCoordinator?
+    //var coordinator: MainCoordinator?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        coordinator = MainCoordinator(navigationController: UINavigationController())
+        //coordinator = MainCoordinator(navigationController: UINavigationController())
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = UIStoryboard.splashViewController()
         self.window?.makeKeyAndVisible()
