@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// TableViewCell containing Assets: BTC & KRW infos
 class AssetsStatisticsCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -22,17 +23,18 @@ class AssetsStatisticsCell: UITableViewCell {
             self.setAssetForKRW()
         }
     }
-    
+    //MARK: - awakeFromNib
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         self.backgroundColor = .black
     }
-    
+    //MARK: - layoutSubviews
     override func layoutSubviews() {
         super.layoutSubviews()
         self.contentView.frame = self.contentView.frame.inset(by: UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0))
     }
+    /// set assets for BTC
     func setAssetforBTC() {
         if let btcAsset = self.btcAsset {
             self.nameLabel.text = btcAsset.name
@@ -40,6 +42,7 @@ class AssetsStatisticsCell: UITableViewCell {
             self.volumeLabel.text = String(describing: btcAsset.volume)
         }
     }
+    /// set assets for KRW
     func setAssetForKRW() {
         if let krwAsset = self.krwAsset {
             self.nameLabel.text = krwAsset.name

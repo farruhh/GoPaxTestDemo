@@ -15,9 +15,17 @@ class TableViewHeaderCustom: UITableViewHeaderFooterView {
     static var nib: UINib {
         return UINib(nibName: String(describing: self), bundle: nil)
     }
-   
+    //MARK: - awakeFromNib
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        self.subContentView.layer.cornerRadius = 30
+        self.subContentView.backgroundColor = .black
+        self.segmentControl.layer.masksToBounds = true
+        self.subContentView.layer.masksToBounds = true
+        self.subContentView.layer.maskedCorners = [.layerMaxXMinYCorner]
+        self.segmentControl.selectedSegmentTintColor = .clear
+        self.segmentControl.backgroundColor = .clear
+        self.segmentControl.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16.0), NSAttributedString.Key.foregroundColor: UIColor.green], for: .normal)
+        self.segmentControl.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 25.0), NSAttributedString.Key.foregroundColor: UIColor.green], for: .selected)
     }
 }

@@ -38,9 +38,8 @@ class SplashViewController: UIViewController {
         animationView.loopMode = .playOnce
         animationView.contentMode = .scaleAspectFit
         animationView.play { (finished) in
-            DispatchQueue.main.asyncAfter(deadline: .now() +  0.5, execute: {
-                let vc  = self.storyboard?.instantiateViewController(identifier: "AssetStatisticsViewController") as! AssetStatisticsViewController
-                self.navigationController?.pushViewController(vc, animated: true)
+            DispatchQueue.main.asyncAfter(deadline: .now() +  0.3, execute: {
+                UIApplication.change(UIStoryboard.assetsStatisticsViewController())
             })
         }
         view.addSubview(animationView)

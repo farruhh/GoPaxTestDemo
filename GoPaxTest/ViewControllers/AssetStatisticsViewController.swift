@@ -16,6 +16,7 @@ class AssetStatisticsViewController: UITableViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Monitor Virtual Assets"
         self.tableView.register(TableViewHeaderCustom.nib, forHeaderFooterViewReuseIdentifier: TableViewHeaderCustom.identifier)
+        self.showActivityIndicatory(uiView: self.view)
     }
     // get headerSegmentControl's selected index and perform "            self.tableView.reloadData()"
     @objc func getSegmentIndex(sender: UISegmentedControl) {
@@ -60,6 +61,37 @@ class AssetStatisticsViewController: UITableViewController {
         return 50
     }
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 150
+        return 250
+    }
+}
+extension AssetStatisticsViewController {
+    func showActivityIndicatory(uiView: UIView) {
+        let container: UIView = UIView()
+        container.frame = uiView.frame
+        container.center = uiView.center
+        container.backgroundColor = UIColor.white
+        
+        let loadingView: UIView = UIView()
+        loadingView.frame = CGRect(x: 0, y: 0, width: 80, height: 80)
+        loadingView.center = uiView.center
+        loadingView.backgroundColor = UIColor.white
+        loadingView.clipsToBounds = true
+        loadingView.layer.cornerRadius = 10
+        
+        let actInd: UIActivityIndicatorView = UIActivityIndicatorView()
+        actInd.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0);
+        actInd.style =
+            UIActivityIndicatorView.Style.large
+        actInd.center = CGPoint(x: loadingView.frame.size.width / 2,
+                                y: loadingView.frame.size.height / 2);
+        loadingView.addSubview(actInd)
+        container.addSubview(loadingView)
+        uiView.addSubview(container)
+        actInd.startAnimating()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+            container.removeFromSuperview()
+            actInd.stopAnimating()
+        })
     }
 }

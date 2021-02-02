@@ -17,7 +17,7 @@ extension UIApplication {
         let rootVC = UIStoryboard.mainNavigation()
         change(rootVC)
     }
-    fileprivate static func change(_ vc: UIViewController) {
+    static func change(_ vc: UIViewController) {
         guard let window = UIApplication.shared.keyWindow else {
             return
         }
